@@ -1,4 +1,4 @@
-# txt2img
+# Text-to-Image Generation with Transformers and Diffusions
 Generative AI is evolving rapidly, revolutionizing every aspect of our lives and work. Text-to-image models, in particular, have gained significant attention due to their ability to translate natural language into visually rich, meaningful images. Models like OpenAI’s DALL-E series, Google’s Imagen, and Stability AI’s Stable Diffusion have shown unprecedented advances in the field of generative AI, turning abstract descriptions into detailed, highly creative visual representations.
 
 I focus on two ways of generating images from text prompts: vision Transformers (ViT) and diffusion models. In the first method, we divide an image into multiple patches and treat each patch as an element in a sequence. As a result, image generation becomes a sequence prediction problem. When generating an image based on a text prompt, we ask the trained Transformer to first predict the top left patch. In the next iteration, we feed the first patch, along with the prompt, to the ViT and ask it to predict the second patch. We repeat the process until we have all the needed patches in the image.
@@ -27,4 +27,8 @@ Better yet, you can visualize the intermediate outputs from the diffusion model.
 
 ![output_39_0](https://github.com/user-attachments/assets/94f27794-f5c3-45e5-8f59-18c2356057b4)
 
+Diffusion models are also excellent image editors. In the figure below, the original horse image is in the middle. When we use the prompt "white horse on sunny beach" to edit the image, the result is shown on the left of the figure. When we use the prompt "zebra on snowy ground" to edit the image, the result is shown on the right of the figure.
+
+
+![edit](https://github.com/user-attachments/assets/d2569f05-992c-4cf9-bcd6-a3e5a1f9e39d)
 
